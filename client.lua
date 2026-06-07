@@ -1,12 +1,13 @@
 include("gfoxyface/vrcft.lua")
 
-CreateClientConVar("gfoxyface_autoenable", "1", true)
-CreateClientConVar("gfoxyface_listen_port", "9000", true)
-CreateClientConVar("gfoxyface_send_port", "9001", true)
+local gfoxyface_autoenable = CreateClientConVar("gfoxyface_autoenable", "1", true)
+local gfoxyface_listen_port = CreateClientConVar("gfoxyface_listen_port", "9000", true)
+local gfoxyface_send_port = CreateClientConVar("gfoxyface_send_port", "9001", true)
+local dbg = gfoxyface.dbg
 
 vrcft.setup{
-  listen_port = GetConVarNumber("gfoxyface_listen_port"),
-  send_port = GetConVarNumber("gfoxyface_send_port"),
+  listen_port = gfoxyface_listen_port:GetInt(),
+  send_port = gfoxyface_send_port:GetInt(),
 }
 
 function gfoxyface.send(...)
@@ -25,7 +26,8 @@ function gfoxyface.stop_listener()
   vrcft.stop()
 end
 
-if GetConVarNumber("gfoxyface_autoenable") ~= 0 then
+if gfoxyface_autoenable:GetBool() then
+  dbg("autoenable listener")
   vrcft.listen(gfoxyface.on_vrcft)
 end
 

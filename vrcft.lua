@@ -303,10 +303,6 @@ local function send(address, ...)
   end
 end
 
-concommand.Add("vrcft_start", start)
-concommand.Add("vrcft_stop", stop)
-concommand.Add("vrcft_restart", function() stop() start() end)
-
 local mod = { listen = listen, start = start, stop = stop, send = send, setup = setup }
 _G.vrcft = mod
 return mod
