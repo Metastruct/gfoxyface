@@ -76,15 +76,30 @@ gfoxyface.running = false
 
 --- Start the OSC listener (UDP socket + timer). Resets frametime delta.
 function gfoxyface.start_listener()
-  if gfoxyface.running then return end
-  gfoxyface.running = true
+  if not _G.socket then
+    if util.IsBinaryModuleInstalled("socket.core") then
+      require("socket")
+    else
+      dbg("cannot start — luasocket missing")
+      return
+    end
+  end
+  if gfoxyface.running then
+    dbg("already running")
+    return
+  end
   gfoxyface.reset_frametime()
   dbg("start listener")
-  vrcft.listen(gfoxyface.on_vrcft)
+  local ok = vrcft.listen(gfoxyface.on_vrcft)
+  gfoxyface.running = ok == true
 end
 
 --- Stop the OSC listener (close socket, remove timer).
 function gfoxyface.stop_listener()
+  if not gfoxyface.running then
+    dbg("not running")
+    return
+  end
   gfoxyface.running = false
   vrcft.stop()
 end
