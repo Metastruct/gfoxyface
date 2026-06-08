@@ -21,8 +21,8 @@ Subscribe on the Steam Workshop: [GFoxyFace](https://steamcommunity.com/sharedfi
 | ConVar | Default | Description |
 |--------|---------|-------------|
 | `gfoxyface_autoenable` | 0 | Auto-start OSC listener on join |
-| `gfoxyface_listen_port` | 9000 | UDP port to receive VRChat OSC |
-| `gfoxyface_send_port` | 9001 | UDP port to send OSC to VRChat |
+| `gfoxyface_listen_port` | 9000 | UDP port to receive VRCFT OSC |
+| `gfoxyface_send_port` | 9001 | UDP port to send OSC to VRCFT |
 | `gfoxyface_debug_ui` | 0 | Show 2D real-time parameter overlay |
 | `gfoxyface_debug_ui_3d` | 0 | Show 3D debug overlay on other players |
 | `gfoxyface_debug_loopback` | 0 | Receive and apply your own relayed tracking data (debugging) |
@@ -32,12 +32,12 @@ Subscribe on the Steam Workshop: [GFoxyFace](https://steamcommunity.com/sharedfi
 |---------|-------------|
 | `gfoxyface_start` | Start the OSC listener |
 | `gfoxyface_stop` | Stop the OSC listener |
-| `gfoxyface_request_tracking_vrcft` | Send avatar change + tracking enable OSC to VRChat |
+| `gfoxyface_request_tracking_vrcft` | Send avatar change + tracking enable OSC to VRCFT |
 | `gfoxyface_status` | Print current status, mappings, and model flexes |
 
 ## Requesting tracking from VRCFT
 
-VRCFT only sends OSC data while you're in a VRChat avatar that requests face tracking. To get data outside VRChat (e.g. in GMod), `gfoxyface_request_tracking_vrcft` sends two OSC messages to VRCFT on port 9001:
+VRCFT only sends OSC data while you're in a VRChat avatar that requests face tracking. To get data outside VRChat (in GMod in our case), `gfoxyface_request_tracking_vrcft` sends two OSC messages to VRCFT on port 9001:
 
 1. `/avatar/change avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1` 
 2. `/avatar/parameters/LipTrackingActive true` and `/avatar/parameters/EyeTrackingActive true`
