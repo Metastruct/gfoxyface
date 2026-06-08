@@ -11,9 +11,9 @@
 ---   - `vrcft.send(address, ...)`       — send OSC message to VRChat
 local DEBUG = true
 local function dbg(...)
-  if not DEBUG then return end
-  Msg"[vrcft] "
-  print(...)
+	if not DEBUG then return end
+	Msg "[vrcft] "
+	print(...)
 end
 local Tag = "vrcft"
 local _osc = include("gfoxyface/osc_parser.lua")
