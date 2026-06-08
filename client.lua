@@ -8,6 +8,7 @@ local gfoxyface_send_port = CreateClientConVar("gfoxyface_send_port", "9001", tr
 local gfoxyface_debug_ui = CreateClientConVar("gfoxyface_debug_ui", "0", true)
 local gfoxyface_debug_ui_3d = CreateClientConVar("gfoxyface_debug_ui_3d", "0", true)
 local gfoxyface_see_others = CreateClientConVar("gfoxyface_see_others", "1", true)
+local gfoxyface_debug_loopback = CreateClientConVar("gfoxyface_debug_loopback", "0", true)
 local dbg = gfoxyface.dbg
 local last_realtime = 0
 
@@ -131,6 +132,7 @@ gfoxyface.last_seen = gfoxyface.last_seen or {}
 function gfoxyface.on_net_setup()
 	local ply = net.ReadPlayer()
 	if not ply or not ply:IsValid() then return end
+	if ply == LocalPlayer() then return end
 	local count = net.ReadUInt(8)
 	gfoxyface.state_setup[ply] = {}
 	for i = 1, count do
@@ -147,7 +149,9 @@ local ply_warn_times = {}
 function gfoxyface.on_net_flexes()
 	local ply = net.ReadPlayer()
 	local ft = net.ReadFloat()
-	if ply and ply:IsValid() and (ply == LocalPlayer() or gfoxyface_see_others:GetBool()) then
+	if not ply or not ply:IsValid() then return end
+	if ply == LocalPlayer() and not gfoxyface_debug_loopback:GetBool() then return end
+	if ply == LocalPlayer() or gfoxyface_see_others:GetBool() then
 		if not gfoxyface.last_seen[ply] then
 			dbg("face tracking started by", ply:Name(), ply:SteamID())
 		end
@@ -162,21 +166,14 @@ function gfoxyface.on_net_flexes()
 		return
 	end
 	local count = net.ReadUInt(8)
-	local results = {}
+	local flexes = {} --TODO: reuse
 	for i = 1, count do
 		local name = net.ReadString()
 		local val = net.ReadFloat()
-		local found = false
-		if ply and ply:IsValid() and ply.SetFlexWeight then
-			local id = gfoxyface.flex_id_by_name(ply, name)
-			if id then
-				ply:SetFlexWeight(id, val)
-				found = true
-			end
-		end
-		results[name] = { found = found, val = val }
+		local id = gfoxyface.flex_id_by_name(ply, name)
+		flexes[name] = { found = id ~= nil, val = val, id = id }
 	end
-	gfoxyface._flex_results[ply] = { time = CurTime(), ft = ft, flexes = results }
+	gfoxyface._flex_results[ply] = { time = CurTime(), ft = ft, flexes = flexes } --TODO: reuse
 end
 
 function gfoxyface.flex_id_by_name(ent, name)
@@ -184,6 +181,19 @@ function gfoxyface.flex_id_by_name(ent, name)
 	for i = 0, count - 1 do
 		if ent:GetFlexName(i) == name then
 			return i
+		end
+	end
+end
+
+function gfoxyface.update_animation(ply)
+	if not ply or not ply:IsValid() or not ply.SetFlexWeight then return end
+	local data = gfoxyface._flex_results[ply]
+	if not data then return end
+	if CurTime() - data.time > 1 then return end
+	for name, info in pairs(data.flexes) do
+		if info.id then
+			ply:SetFlexWeight(info.id, info.val)
+			ply:SetFlexScale(info.id, 2)
 		end
 	end
 end
@@ -208,32 +218,32 @@ function gfoxyface.get_localplayer_flex_names()
 end
 
 gfoxyface.mapping = {
-	["FT/v2/JawOpen"] = { targets = { ["jaw_drop"] = { 1 } } },
-	["FT/v2/LipPucker"] = { targets = { ["left_puckerer"] = { 1 }, ["right_puckerer"] = { 1 } } },
-	["FT/v2/LipFunnel"] = { targets = { ["left_funneler"] = { 1 }, ["right_funneler"] = { 1 } } },
-	["FT/v2/MouthStretchLeft"] = { targets = { ["left_stretcher"] = { 1 } } },
-	["FT/v2/MouthStretchRight"] = { targets = { ["right_stretcher"] = { 1 } } },
-	["FT/v2/MouthClosed"] = { targets = { ["bite"] = { 1 } } },
-	["FT/v2/MouthLowerDown"] = { targets = { ["lower_lip"] = { 1 } } },
-	["FT/v2/MouthPress"] = { targets = { ["presser"] = { 1 } } },
-	["FT/v2/MouthRaiserLower"] = { targets = { ["chin_raiser"] = { 1 } } },
-	["FT/v2/MouthUpperUpLeft"] = { targets = { ["left_upper_raiser"] = { 1 } } },
-	["FT/v2/MouthUpperUpRight"] = { targets = { ["right_upper_raiser"] = { 1 } } },
-	["FT/v2/SmileFrownLeft"] = { targets = { ["left_corner_puller"] = { 1 } } },
-	["FT/v2/SmileFrownRight"] = { targets = { ["right_corner_puller"] = { 1 } } },
-	["FT/v2/CheekPuffSuckLeft"] = { targets = { ["left_cheek_raiser"] = { 1 } } },
-	["FT/v2/CheekPuffSuckRight"] = { targets = { ["right_cheek_raiser"] = { 1 } } },
-	["FT/v2/EyeLidLeft"] = { targets = { ["left_lid_closer"] = { 1 } } },
-	["FT/v2/EyeLidRight"] = { targets = { ["right_lid_closer"] = { 1 } } },
-	["FT/v2/EyeLeftX"] = { targets = { ["eyes_rightleft"] = { 1 } } },
-	["FT/v2/EyeRightX"] = { targets = { ["eyes_rightleft"] = { 1 } } },
-	["FT/v2/EyeY"] = { targets = { ["eyes_updown"] = { 1 } } },
-	["FT/v2/EyeSquintLeft"] = { targets = { ["left_lid_tightener"] = { 1 } } },
-	["FT/v2/EyeSquintRight"] = { targets = { ["right_lid_tightener"] = { 1 } } },
-	["FT/v2/BrowExpressionLeft"] = { targets = { ["left_outer_raiser"] = { 1 } } },
-	["FT/v2/BrowExpressionRight"] = { targets = { ["right_outer_raiser"] = { 1 } } },
-	["FT/v2/NoseSneer"] = { targets = { ["wrinkler"] = { 1 } } },
-	["FT/v2/MouthRaiserUpper"] = { targets = { ["smile"] = { 1 } } },
+	["FT/v2/JawOpen"] = { targets = { ["jaw_drop"] = { 2 } } },
+	["FT/v2/LipPucker"] = { targets = { ["left_puckerer"] = { 2 }, ["right_puckerer"] = { 2 } } },
+	["FT/v2/LipFunnel"] = { targets = { ["left_funneler"] = { 2 }, ["right_funneler"] = { 2 } } },
+	["FT/v2/MouthStretchLeft"] = { targets = { ["left_stretcher"] = { 2 } } },
+	["FT/v2/MouthStretchRight"] = { targets = { ["right_stretcher"] = { 2 } } },
+	["FT/v2/MouthClosed"] = { targets = { ["bite"] = { 2 } } },
+	["FT/v2/MouthLowerDown"] = { targets = { ["lower_lip"] = { 2 } } },
+	["FT/v2/MouthPress"] = { targets = { ["presser"] = { 2 } } },
+	["FT/v2/MouthRaiserLower"] = { targets = { ["chin_raiser"] = { 2 } } },
+	["FT/v2/MouthUpperUpLeft"] = { targets = { ["left_upper_raiser"] = { 2 } } },
+	["FT/v2/MouthUpperUpRight"] = { targets = { ["right_upper_raiser"] = { 2 } } },
+	["FT/v2/SmileFrownLeft"] = { targets = { ["left_corner_puller"] = { 2 } } },
+	["FT/v2/SmileFrownRight"] = { targets = { ["right_corner_puller"] = { 2 } } },
+	["FT/v2/CheekPuffSuckLeft"] = { targets = { ["left_cheek_raiser"] = { 2 } } },
+	["FT/v2/CheekPuffSuckRight"] = { targets = { ["right_cheek_raiser"] = { 2 } } },
+	["FT/v2/EyeLidLeft"] = { targets = { ["left_lid_closer"] = { 2 } } },
+	["FT/v2/EyeLidRight"] = { targets = { ["right_lid_closer"] = { 2 } } },
+	["FT/v2/EyeLeftX"] = { targets = { ["eyes_rightleft"] = { 2 } } },
+	["FT/v2/EyeRightX"] = { targets = { ["eyes_rightleft"] = { 2 } } },
+	["FT/v2/EyeY"] = { targets = { ["eyes_updown"] = { 2 } } },
+	["FT/v2/EyeSquintLeft"] = { targets = { ["left_lid_tightener"] = { 2 } } },
+	["FT/v2/EyeSquintRight"] = { targets = { ["right_lid_tightener"] = { 2 } } },
+	["FT/v2/BrowExpressionLeft"] = { targets = { ["left_outer_raiser"] = { 2 } } },
+	["FT/v2/BrowExpressionRight"] = { targets = { ["right_outer_raiser"] = { 2 } } },
+	["FT/v2/NoseSneer"] = { targets = { ["wrinkler"] = { 2 } } },
+	["FT/v2/MouthRaiserUpper"] = { targets = { ["smile"] = { 2 } } },
 }
 
 function gfoxyface.on_model_change() -- build state_setup[lp] from mapping + model flexes
@@ -261,6 +271,7 @@ function gfoxyface.on_model_change() -- build state_setup[lp] from mapping + mod
 	end
 	if not next(gfoxyface.state_setup[lp] or {}) then
 		dbg("no mapping targets found for this model")
+		lp:ChatPrint("[GFoxyFace] no mapping targets found for " .. lp:GetModel())
 	end
 end
 	end
@@ -303,6 +314,8 @@ hook.Add("Think", Tag, function()
 	gfoxyface.think_modelcheck()
 	gfoxyface.think_setup()
 end)
+
+hook.Add("UpdateAnimation", Tag, gfoxyface.update_animation)
 
 hook.Add("Tick", Tag, function()
 	if not gfoxyface.running then return end
