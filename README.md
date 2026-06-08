@@ -50,20 +50,37 @@ This triggers VRCFT to start forwarding face-track data to GMod via OSC on port 
 Before the OSC hack works, you need to have **loaded the avatar in VRChat at least once**. VRCFT won't forward tracking data for avatars it hasn't seen.
 
 1. Install **[VRChat](https://store.steampowered.com/app/438100/VRChat/)** on Steam.
-2. Wear the debug avatar: [VRCFaceTracking Debug Avatar](https://vrchat.com/home/avatar/avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1)
+2. Wear the avatar: [HQ Meta-man](https://vrchat.com/home/avatar/avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1)
 3. Enable OSC from circle menu settings!!!
 4. Close VRChat. The avatar osc config is now cached.
+
+### Manual config copy
+
+If you REALLY don't want to install VRChat (helps debug VRCFT):
+
+Copy `avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1.example.json` (included in this repo) to:
+
+```
+C:\Users\<YourUser>\AppData\LocalLow\VRChat\VRChat\OSC\usr_<your_usr_id>\Avatars\
+```
+
+(Keep the filename `avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1.json`, find your `usr_<id>` folder inside `OSC\` — it's created once you enable OSC in VRChat.)
 
 ## Developers: data flow
 
 ```mermaid
 flowchart TB
+    VRChatAvatar["<b>VRChat.exe generated</b> avtr_<br/>oscconfig1123123_.json"] -.-> VRCFT
     Webcam --> FoxyFace --> VRCFT
-    VRCFT -- "OSC / port 9000" --> luasocket["luasocket<br/>(socket.core)"]
+    VRCFT -- "OSC / port 9000" --> luasocket["<b>GMod</b><br> <i>(luasocket dll)</i>"]
     luasocket -- "OSC / port 9001" --> VRCFT
-    luasocket --> GMod
-    GMod --> gfoxyface_state["gfoxyface.state"]
-    gfoxyface_state -- "Tick → net message" --> Server
-    Server --> OtherClients["Other Clients"]
-    OtherClients --> UpdateAnimation["UpdateAnimation<br/>SetFlexWeight + SetFlexScale"]
+    luasocket --> on_vrcft["vrcft.lua -> client.lua -> on_vrcft()"]
+    on_vrcft--> state
+    mapping["gfoxyface.mapping"]--> state
+
+    state -- "<b>net.SendToServer</b>:<br>flex names (every 5s)<br/>flex values (every tick)" --> server.lua
+
+    server.lua -- "rebroadcast" --> client.lua["<b>client.lua</b><br/>on_net_setup / on_net_flexes"]
+
+    client.lua --> UpdateAnimation["<b>UpdateAnimation</b><br/>SetFlexWeight + SetFlexScale"]
 ```

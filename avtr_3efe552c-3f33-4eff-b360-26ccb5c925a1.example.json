@@ -1,0 +1,2073 @@
+﻿{
+  "id": "avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1",
+  "name": "HQ Meta-man",
+  "hash": 1174104549,
+  "parameters": [
+    {
+      "name": "MewingColliderR",
+      "input": {
+        "address": "/avatar/parameters/MewingColliderR",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/MewingColliderR",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "Weight",
+      "input": {
+        "address": "/avatar/parameters/Weight",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/Weight",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "DebugPannel",
+      "input": {
+        "address": "/avatar/parameters/DebugPannel",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/DebugPannel",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FTOff",
+      "input": {
+        "address": "/avatar/parameters/FTOff",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/FTOff",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FTOn",
+      "input": {
+        "address": "/avatar/parameters/FTOn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/FTOn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "PCSS_LightAim",
+      "input": {
+        "address": "/avatar/parameters/PCSS_LightAim",
+        "type": "Int"
+      },
+      "output": {
+        "address": "/avatar/parameters/PCSS_LightAim",
+        "type": "Int"
+      }
+    },
+    {
+      "name": "PCSS_LightColorB",
+      "input": {
+        "address": "/avatar/parameters/PCSS_LightColorB",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/PCSS_LightColorB",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "PCSS_LightColorG",
+      "input": {
+        "address": "/avatar/parameters/PCSS_LightColorG",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/PCSS_LightColorG",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "PCSS_LightColorR",
+      "input": {
+        "address": "/avatar/parameters/PCSS_LightColorR",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/PCSS_LightColorR",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "PCSS_LightHandleOn",
+      "input": {
+        "address": "/avatar/parameters/PCSS_LightHandleOn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/PCSS_LightHandleOn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "PCSS_LightIntensity",
+      "input": {
+        "address": "/avatar/parameters/PCSS_LightIntensity",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/PCSS_LightIntensity",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "PCSS_LightStrength",
+      "input": {
+        "address": "/avatar/parameters/PCSS_LightStrength",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/PCSS_LightStrength",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "volvo",
+      "input": {
+        "address": "/avatar/parameters/volvo",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/volvo",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "ChadFace",
+      "input": {
+        "address": "/avatar/parameters/ChadFace",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/ChadFace",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthClosed",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthClosed",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthClosed",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "FT/v2/JawOpen",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/JawOpen",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/JawOpen",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "FT/v2/EyeY",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/EyeY",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/EyeY",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "FT/v2/EyeRightX",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/EyeRightX",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/EyeRightX",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "FT/v2/EyeLeftX",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/EyeLeftX",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/EyeLeftX",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "FacialExpressionsDisabled",
+      "input": {
+        "address": "/avatar/parameters/FacialExpressionsDisabled",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/FacialExpressionsDisabled",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "VisemesEnable",
+      "input": {
+        "address": "/avatar/parameters/VisemesEnable",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/VisemesEnable",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "EyeDilationEnable",
+      "input": {
+        "address": "/avatar/parameters/EyeDilationEnable",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/EyeDilationEnable",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "LipTrackingActive",
+      "input": {
+        "address": "/avatar/parameters/LipTrackingActive",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/LipTrackingActive",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "EyeTrackingActive",
+      "input": {
+        "address": "/avatar/parameters/EyeTrackingActive",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/EyeTrackingActive",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/s2thoPev/rF/TMus",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/s2thoPev/rF/TMus",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/s2thoPev/rF/TMus",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/s2thoPev/rF/TMus",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/s2thoPev/rF/TMus",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/s2thoPev/rF/TMus",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/s2thoPev/rF/TMus",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/s2thoPev/rF/TMus",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/s2thoPev/rF/TMus",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthPress",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthPress",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthPress",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/e2thpoRiv/apF/eTrrMusU",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/e2thpoRiv/apF/eTrrMusU",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/e2thpoRiv/apF/eTrrMusU",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/e2thpoRiv/apF/eTrrMusU",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/e2thpoRiv/apF/eTrrMusU",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/e2thpoRiv/apF/eTrrMusU",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/e2thpoRiv/apF/eTrrMusU",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/e2thpoRiv/apF/eTrrMusU",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/e2thpoRiv/apF/eTrrMusU",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthRaiserUpper",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthRaiserUpper",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthRaiserUpper",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/e2thwoRiv/aoF/eTrrMusL",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/e2thwoRiv/aoF/eTrrMusL",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/e2thwoRiv/aoF/eTrrMusL",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/e2thwoRiv/aoF/eTrrMusL",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/e2thwoRiv/aoF/eTrrMusL",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/e2thwoRiv/aoF/eTrrMusL",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/e2thwoRiv/aoF/eTrrMusL",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/e2thwoRiv/aoF/eTrrMusL",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/e2thwoRiv/aoF/eTrrMusL",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthRaiserLower",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthRaiserLower",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthRaiserLower",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/t2iluDlv/inF/TiPpao",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2iluDlv/inF/TiPpao",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2iluDlv/inF/TiPpao",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/t2iluDlv/inF/TiPpao",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2iluDlv/inF/TiPpao",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2iluDlv/inF/TiPpao",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/t2iluDlv/inF/TiPpao",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2iluDlv/inF/TiPpao",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2iluDlv/inF/TiPpao",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/PupilDilation",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/PupilDilation",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/PupilDilation",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/2guoev/YF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2guoev/YF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2guoev/YF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2guoev/YF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2guoev/YF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2guoev/YF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2guoev/YF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2guoev/YF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2guoev/YF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2guoev/YF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2guoev/YF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2guoev/YF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/TongueY",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/TongueY",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/TongueY",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/2guoev/XF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2guoev/XF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2guoev/XF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2guoev/XF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2guoev/XF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2guoev/XF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2guoev/XF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2guoev/XF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2guoev/XF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2guoev/XF/TTn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2guoev/XF/TTn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2guoev/XF/TTn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/TongueX",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/TongueX",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/TongueX",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2guoeuv/OF/TTnt",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2guoeuv/OF/TTnt",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2guoeuv/OF/TTnt",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2guoeuv/OF/TTnt",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2guoeuv/OF/TTnt",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2guoeuv/OF/TTnt",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2guoeuv/OF/TTnt",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2guoeuv/OF/TTnt",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2guoeuv/OF/TTnt",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/TongueOut",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/TongueOut",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/TongueOut",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/2Xav/F/TJw",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2Xav/F/TJw",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2Xav/F/TJw",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/2Xav/F/TJw",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/2Xav/F/TJw",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/2Xav/F/TJw",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2Xav/F/TJw",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2Xav/F/TJw",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2Xav/F/TJw",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2Xav/F/TJw",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2Xav/F/TJw",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2Xav/F/TJw",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2Xav/F/TJw",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2Xav/F/TJw",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2Xav/F/TJw",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/JawX",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/JawX",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/JawX",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/d2Foarav/wF/TJwr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/d2Foarav/wF/TJwr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/d2Foarav/wF/TJwr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/d2Foarav/wF/TJwr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/d2Foarav/wF/TJwr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/d2Foarav/wF/TJwr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/d2Foarav/wF/TJwr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/d2Foarav/wF/TJwr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/d2Foarav/wF/TJwr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/JawForward",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/JawForward",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/JawForward",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/w2SuicLv/kF/TeLpor",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/w2SuicLv/kF/TeLpor",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/w2SuicLv/kF/TeLpor",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/w2SuicLv/kF/TeLpor",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/w2SuicLv/kF/TeLpor",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/w2SuicLv/kF/TeLpor",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/w2SuicLv/kF/TeLpor",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/w2SuicLv/kF/TeLpor",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/w2SuicLv/kF/TeLpor",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/LipSuckLower",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/LipSuckLower",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/LipSuckLower",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/p2SuicUv/kF/TeLppr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/p2SuicUv/kF/TeLppr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/p2SuicUv/kF/TeLppr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/p2SuicUv/kF/TeLppr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/p2SuicUv/kF/TeLppr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/p2SuicUv/kF/TeLppr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/p2SuicUv/kF/TeLppr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/p2SuicUv/kF/TeLppr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/p2SuicUv/kF/TeLppr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/LipSuckUpper",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/LipSuckUpper",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/LipSuckUpper",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/th2throTgv/ietF/RTieMuhgn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/th2throTgv/ietF/RTieMuhgn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/th2throTgv/ietF/RTieMuhgn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/th2throTgv/ietF/RTieMuhgn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/th2throTgv/ietF/RTieMuhgn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/th2throTgv/ietF/RTieMuhgn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/th2throTgv/ietF/RTieMuhgn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/th2throTgv/ietF/RTieMuhgn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/th2throTgv/ietF/RTieMuhgn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthTightenerRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthTightenerRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthTightenerRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/tt2throTgv/ieF/LTeeMuhfn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/tt2throTgv/ieF/LTeeMuhfn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/tt2throTgv/ieF/LTeeMuhfn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/tt2throTgv/ieF/LTeeMuhfn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/tt2throTgv/ieF/LTeeMuhfn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/tt2throTgv/ieF/LTeeMuhfn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/tt2throTgv/ieF/LTeeMuhfn",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/tt2throTgv/ieF/LTeeMuhfn",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/tt2throTgv/ieF/LTeeMuhfn",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthTightenerLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthTightenerLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthTightenerLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/t2thioSrv/tRF/gThcMueth",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2thioSrv/tRF/gThcMueth",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2thioSrv/tRF/gThcMueth",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/t2thioSrv/tRF/gThcMueth",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2thioSrv/tRF/gThcMueth",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2thioSrv/tRF/gThcMueth",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/t2thioSrv/tRF/gThcMueth",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2thioSrv/tRF/gThcMueth",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2thioSrv/tRF/gThcMueth",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthStretchRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthStretchRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthStretchRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/t2theoSrv/tLF/fTtcMueh",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2theoSrv/tLF/fTtcMueh",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2theoSrv/tLF/fTtcMueh",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/t2theoSrv/tLF/fTtcMueh",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2theoSrv/tLF/fTtcMueh",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2theoSrv/tLF/fTtcMueh",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/t2theoSrv/tLF/fTtcMueh",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2theoSrv/tLF/fTtcMueh",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2theoSrv/tLF/fTtcMueh",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthStretchLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthStretchLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthStretchLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2eSonev/eF/TNsr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2eSonev/eF/TNsr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2eSonev/eF/TNsr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2eSonev/eF/TNsr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2eSonev/eF/TNsr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2eSonev/eF/TNsr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2eSonev/eF/TNsr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2eSonev/eF/TNsr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2eSonev/eF/TNsr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/NoseSneer",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/NoseSneer",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/NoseSneer",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/2thoXv/F/TMu",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2thoXv/F/TMu",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/2thoXv/F/TMu",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/2thoXv/F/TMu",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/2thoXv/F/TMu",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/2thoXv/F/TMu",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2thoXv/F/TMu",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2thoXv/F/TMu",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2thoXv/F/TMu",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2thoXv/F/TMu",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2thoXv/F/TMu",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2thoXv/F/TMu",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2thoXv/F/TMu",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2thoXv/F/TMu",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2thoXv/F/TMu",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthX",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthX",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthX",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2Puicev/kF/TLpr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2Puicev/kF/TLpr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2Puicev/kF/TLpr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2Puicev/kF/TLpr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2Puicev/kF/TLpr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2Puicev/kF/TLpr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2Puicev/kF/TLpr",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2Puicev/kF/TLpr",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2Puicev/kF/TLpr",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/LipPucker",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/LipPucker",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/LipPucker",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/2Fuinev/nF/TLpl",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2Fuinev/nF/TLpl",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/2Fuinev/nF/TLpl",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/2Fuinev/nF/TLpl",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2Fuinev/nF/TLpl",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/2Fuinev/nF/TLpl",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/2Fuinev/nF/TLpl",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2Fuinev/nF/TLpl",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/2Fuinev/nF/TLpl",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/LipFunnel",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/LipFunnel",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/LipFunnel",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/St2ekRhPfv/ukF/iTguCefhc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/St2ekRhPfv/ukF/iTguCefhc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/St2ekRhPfv/ukF/iTguCefhc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/St2ekRhPfv/ukF/iTguCefhc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/St2ekRhPfv/ukF/iTguCefhc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/CheekPuffSuckRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/CheekPuffSuckRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/CheekPuffSuckRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/S2ekLhPfv/ukF/eTfuCeftc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/S2ekLhPfv/ukF/eTfuCeftc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/S2ekLhPfv/ukF/eTfuCeftc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/S2ekLhPfv/ukF/eTfuCeftc",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/S2ekLhPfv/ukF/eTfuCeftc",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/CheekPuffSuckLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/CheekPuffSuckLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/CheekPuffSuckLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/n2lehmFov/rgF/tTRSiwi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/n2lehmFov/rgF/tTRSiwi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/n2lehmFov/rgF/tTRSiwi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/n2lehmFov/rgF/tTRSiwi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/n2lehmFov/rgF/tTRSiwi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/n2lehmFov/rgF/tTRSiwi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/SmileFrownRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/SmileFrownRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/SmileFrownRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/n2letmFov/rfF/TLSiwe",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/n2letmFov/rfF/TLSiwe",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/n2letmFov/rfF/TLSiwe",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/n2letmFov/rfF/TLSiwe",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/n2letmFov/rfF/TLSiwe",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/n2letmFov/rfF/TLSiwe",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/SmileFrownLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/SmileFrownLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/SmileFrownLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/r2thnoLwv/owF/TDMueo",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/r2thnoLwv/owF/TDMueo",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/r2thnoLwv/owF/TDMueo",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/r2thnoLwv/owF/TDMueo",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/r2thnoLwv/owF/TDMueo",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/r2thnoLwv/owF/TDMueo",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/r2thnoLwv/owF/TDMueo",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/r2thnoLwv/owF/TDMueo",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/r2thnoLwv/owF/TDMueo",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthLowerDown",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthLowerDown",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthLowerDown",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/r2thioUpv/pRF/gThUMuetp",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/r2thioUpv/pRF/gThUMuetp",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/r2thioUpv/pRF/gThUMuetp",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/r2thioUpv/pRF/gThUMuetp",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/r2thioUpv/pRF/gThUMuetp",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthUpperUpRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthUpperUpRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthUpperUpRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/r2theoUpv/pLF/fTtUMuep",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/r2theoUpv/pLF/fTtUMuep",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/r2theoUpv/pLF/fTtUMuep",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/r2theoUpv/pLF/fTtUMuep",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/r2theoUpv/pLF/fTtUMuep",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/MouthUpperUpLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/MouthUpperUpLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/MouthUpperUpLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/R2Sqtyunv/ihF/TiEetg",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/R2Sqtyunv/ihF/TiEetg",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/R2Sqtyunv/ihF/TiEetg",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/R2Sqtyunv/ihF/TiEetg",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/R2Sqtyunv/ihF/TiEetg",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/R2Sqtyunv/ihF/TiEetg",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/R2Sqtyunv/ihF/TiEetg",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/R2Sqtyunv/ihF/TiEetg",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/R2Sqtyunv/ihF/TiEetg",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/EyeSquintRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/EyeSquintRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/EyeSquintRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/L2Sqyunv/itF/TeEetf",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/L2Sqyunv/itF/TeEetf",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/L2Sqyunv/itF/TeEetf",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/L2Sqyunv/itF/TeEetf",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/L2Sqyunv/itF/TeEetf",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/L2Sqyunv/itF/TeEetf",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/L2Sqyunv/itF/TeEetf",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/L2Sqyunv/itF/TeEetf",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/L2Sqyunv/itF/TeEetf",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/EyeSquintLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/EyeSquintLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/EyeSquintLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/h2Liydiv/RF/TtEeg",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/h2Liydiv/RF/TtEeg",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/h2Liydiv/RF/TtEeg",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/h2Liydiv/RF/TtEeg",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/h2Liydiv/RF/TtEeg",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/EyeLidRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/EyeLidRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/EyeLidRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/8/t2Liydev/LF/TEef",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/8/t2Liydev/LF/TEef",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/8/t2Liydev/LF/TEef",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/t2Liydev/LF/TEef",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2Liydev/LF/TEef",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/t2Liydev/LF/TEef",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/t2Liydev/LF/TEef",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2Liydev/LF/TEef",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/t2Liydev/LF/TEef",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/t2Liydev/LF/TEef",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2Liydev/LF/TEef",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/t2Liydev/LF/TEef",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/EyeLidLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/EyeLidLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/EyeLidLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/sh2wEnrxrv/potF/RTisBoegi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/sh2wEnrxrv/potF/RTisBoegi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/sh2wEnrxrv/potF/RTisBoegi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/sh2wEnrxrv/potF/RTisBoegi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/sh2wEnrxrv/potF/RTisBoegi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/BrowExpressionRight",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/BrowExpressionRight",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/BrowExpressionRight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "OSCm/Binary/Negative/st2wEnrxrv/poF/LTesBoefi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/Negative/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/4/st2wEnrxrv/poF/LTesBoefi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/4/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/4/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/2/st2wEnrxrv/poF/LTesBoefi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/2/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/2/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "OSCm/Binary/1/st2wEnrxrv/poF/LTesBoefi",
+      "input": {
+        "address": "/avatar/parameters/OSCm/Binary/1/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      },
+      "output": {
+        "address": "/avatar/parameters/OSCm/Binary/1/st2wEnrxrv/poF/LTesBoefi",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "FT/v2/BrowExpressionLeft",
+      "input": {
+        "address": "/avatar/parameters/FT/v2/BrowExpressionLeft",
+        "type": "Float"
+      },
+      "output": {
+        "address": "/avatar/parameters/FT/v2/BrowExpressionLeft",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "PreviewMode",
+      "output": {
+        "address": "/avatar/parameters/PreviewMode",
+        "type": "Int"
+      }
+    },
+    {
+      "name": "InStation",
+      "output": {
+        "address": "/avatar/parameters/InStation",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "Seated",
+      "output": {
+        "address": "/avatar/parameters/Seated",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "GestureRightWeight",
+      "output": {
+        "address": "/avatar/parameters/GestureRightWeight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "GestureLeftWeight",
+      "output": {
+        "address": "/avatar/parameters/GestureLeftWeight",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "GestureRight",
+      "output": {
+        "address": "/avatar/parameters/GestureRight",
+        "type": "Int"
+      }
+    },
+    {
+      "name": "GestureLeft",
+      "output": {
+        "address": "/avatar/parameters/GestureLeft",
+        "type": "Int"
+      }
+    },
+    {
+      "name": "Viseme",
+      "output": {
+        "address": "/avatar/parameters/Viseme",
+        "type": "Int"
+      }
+    },
+    {
+      "name": "IsAnimatorEnabled",
+      "output": {
+        "address": "/avatar/parameters/IsAnimatorEnabled",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "IsOnFriendsList",
+      "output": {
+        "address": "/avatar/parameters/IsOnFriendsList",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "EyeHeightAsMeters",
+      "output": {
+        "address": "/avatar/parameters/EyeHeightAsMeters",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "EyeHeightAsPercent",
+      "output": {
+        "address": "/avatar/parameters/EyeHeightAsPercent",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "ScaleModified",
+      "output": {
+        "address": "/avatar/parameters/ScaleModified",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "ScaleFactorInverse",
+      "output": {
+        "address": "/avatar/parameters/ScaleFactorInverse",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "ScaleFactor",
+      "output": {
+        "address": "/avatar/parameters/ScaleFactor",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "VelocityMagnitude",
+      "output": {
+        "address": "/avatar/parameters/VelocityMagnitude",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "Earmuffs",
+      "output": {
+        "address": "/avatar/parameters/Earmuffs",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "Voice",
+      "output": {
+        "address": "/avatar/parameters/Voice",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "MuteSelf",
+      "output": {
+        "address": "/avatar/parameters/MuteSelf",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "VRMode",
+      "output": {
+        "address": "/avatar/parameters/VRMode",
+        "type": "Int"
+      }
+    },
+    {
+      "name": "TrackingType",
+      "output": {
+        "address": "/avatar/parameters/TrackingType",
+        "type": "Int"
+      }
+    },
+    {
+      "name": "Upright",
+      "output": {
+        "address": "/avatar/parameters/Upright",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "AFK",
+      "output": {
+        "address": "/avatar/parameters/AFK",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "Grounded",
+      "output": {
+        "address": "/avatar/parameters/Grounded",
+        "type": "Bool"
+      }
+    },
+    {
+      "name": "AngularY",
+      "output": {
+        "address": "/avatar/parameters/AngularY",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "VelocityZ",
+      "output": {
+        "address": "/avatar/parameters/VelocityZ",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "VelocityY",
+      "output": {
+        "address": "/avatar/parameters/VelocityY",
+        "type": "Float"
+      }
+    },
+    {
+      "name": "VelocityX",
+      "output": {
+        "address": "/avatar/parameters/VelocityX",
+        "type": "Float"
+      }
+    }
+  ]
+}
