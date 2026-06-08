@@ -3,6 +3,7 @@
 Garry's Mod ↔ VRCFaceTracking bridge using OSC over UDP.
 
 > **⚠ WIP — Work in Progress.** Everything is subject to change. Use at your own risk.
+<img width="760" height="569" alt="image" src="https://github.com/user-attachments/assets/68da69e9-fd54-4866-8961-56108ade2c07" />
 
 ## Install
 
