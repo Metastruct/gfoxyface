@@ -66,6 +66,17 @@ C:\Users\<YourUser>\AppData\LocalLow\VRChat\VRChat\OSC\usr_<your_usr_id>\Avatars
 
 (Keep the filename `avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1.json`, find your `usr_<id>` folder inside `OSC\` — it's created once you enable OSC in VRChat.)
 
+## TODO
+ - remap -1 1 (so things look sane)
+ - Sane default mapping (see photo)
+ - Configuration (GUI?) for remapping
+     - debug view? 
+ - SetFlexScale networking?
+ - Lessons from https://github.com/Metastruct/vrmod-addon/blob/main/lua/vrmod/vrmod_sranipal.lua ?
+ - Compatibility with mouth move from GAMEMODE
+ - hand tracking
+
+
 ## Developers: data flow
 
 ```mermaid
