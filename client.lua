@@ -6,6 +6,7 @@ local gfoxyface_autoenable = CreateClientConVar("gfoxyface_autoenable", "0", tru
 local gfoxyface_listen_port = CreateClientConVar("gfoxyface_listen_port", "9000", true)
 local gfoxyface_send_port = CreateClientConVar("gfoxyface_send_port", "9001", true)
 local gfoxyface_debug_ui = CreateClientConVar("gfoxyface_debug_ui", "0", true)
+local gfoxyface_debug_ui_3d = CreateClientConVar("gfoxyface_debug_ui_3d", "0", true)
 local gfoxyface_see_others = CreateClientConVar("gfoxyface_see_others", "1", true)
 local dbg = gfoxyface.dbg
 local last_realtime = 0
@@ -140,6 +141,7 @@ function gfoxyface.on_net_setup()
 end
 
 gfoxyface.state_setup = {}
+gfoxyface._flex_results = {}
 
 local ply_warn_times = {}
 function gfoxyface.on_net_flexes()
@@ -160,16 +162,21 @@ function gfoxyface.on_net_flexes()
 		return
 	end
 	local count = net.ReadUInt(8)
+	local results = {}
 	for i = 1, count do
 		local name = net.ReadString()
 		local val = net.ReadFloat()
+		local found = false
 		if ply and ply:IsValid() and ply.SetFlexWeight then
 			local id = gfoxyface.flex_id_by_name(ply, name)
 			if id then
 				ply:SetFlexWeight(id, val)
+				found = true
 			end
 		end
+		results[name] = { found = found, val = val }
 	end
+	gfoxyface._flex_results[ply] = { time = CurTime(), ft = ft, flexes = results }
 end
 
 function gfoxyface.flex_id_by_name(ent, name)
@@ -361,6 +368,57 @@ concommand.Add("gfoxyface_stop", function()
 	gfoxyface.stop_listener()
 end)
 
+function gfoxyface.status()
+	local lp = LocalPlayer()
+	local c_h = Color(255, 255, 200)
+	local c_g = Color(100, 255, 100)
+	local c_r = Color(255, 100, 100)
+	local c_w = Color(255, 255, 255)
+	MsgC(c_h, "--- GFoxyFace Status ---\n")
+	MsgC(gfoxyface.running and c_g or c_r, "running: " .. tostring(gfoxyface.running) .. "\n")
+	MsgC(c_w, "state keys: " .. tostring(table.Count(gfoxyface.state)) .. "\n")
+	if lp and lp:IsValid() then
+		local setup = gfoxyface.state_setup[lp]
+		if setup then
+			local n = 0
+			for _, info in pairs(setup) do
+				if type(info) == "table" then
+					n = n + 1
+				end
+			end
+			MsgC(c_w, "model mappings: " .. n .. "\n")
+			if n == 0 then
+				MsgC(c_r, "  no mapping targets matched this model\n")
+				MsgC(c_h, "  model flexes:\n")
+				for _, name in ipairs(gfoxyface.get_localplayer_flex_names()) do
+					MsgC(c_w, "    " .. name .. "\n")
+				end
+				MsgC(c_h, "  received state keys:\n")
+				for key, _ in pairs(gfoxyface.state) do
+					MsgC(c_w, "    " .. key .. "\n")
+				end
+			else
+				for id, info in pairs(setup) do
+					if type(info) == "table" then
+						MsgC(c_g, "  ")
+						MsgC(c_w, info.param .. " -> " .. info.flex_name .. " (id " .. id .. ")\n")
+					end
+				end
+			end
+		else
+			MsgC(c_r, "model mappings: none (on_model_change not run)\n")
+		end
+		MsgC(c_w, "model: " .. lp:GetModel() .. "\n")
+	else
+		MsgC(c_r, "no local player\n")
+	end
+	MsgC(c_h, "-----------------------\n")
+end
+
+concommand.Add("gfoxyface_status", function()
+	gfoxyface.status()
+end)
+
 hook.Add("HUDPaint", "gfoxyface_debug_ui", function()
 	if not gfoxyface_debug_ui:GetBool() then return end
 	local now = RealTime()
@@ -410,4 +468,39 @@ hook.Add("HUDPaint", "gfoxyface_debug_ui", function()
 			y = y + 22
 		end
 	end
+end)
+
+hook.Add("PostPlayerDraw", "gfoxyface_debug_ui_3d", function(ply)
+	if not gfoxyface_debug_ui_3d:GetBool() then return end
+	if ply == LocalPlayer() then return end
+	local results = gfoxyface._flex_results[ply]
+	if not results then return end
+	local age = CurTime() - results.time
+	if age > 5 then return end
+
+	local pos = ply:GetPos() + Vector(0, 0, 80)
+	local ang = Angle(0, (EyePos() - pos):Angle().yaw + 90, 90)
+
+	cam.Start3D2D(pos, ang, 0.1)
+		draw.DrawText(string.format("ft: %.3f", results.ft), "DermaDefault", 0, 0, Color(255, 255, 255), TEXT_ALIGN_LEFT)
+		local y = 14
+		for name, info in pairs(results.flexes) do
+			local col = info.found and Color(0, 220, 0) or Color(220, 0, 0)
+			draw.DrawText((info.found and "✓ " or "✗ ") .. name, "DermaDefault", 0, y, col, TEXT_ALIGN_LEFT)
+			local clamped = math.Clamp(info.val, -1, 1)
+			local bw, bh = 60, 8
+			local cx = 140
+			local hw = bw / 2
+			surface.SetDrawColor(40, 40, 40, 200)
+			surface.DrawRect(cx - hw, y + 3, bw, bh)
+			surface.SetDrawColor(info.found and Color(0, 220, 0, 200) or Color(220, 0, 0, 200))
+			if clamped >= 0 then
+				surface.DrawRect(cx, y + 3, clamped * hw, bh)
+			else
+				surface.DrawRect(cx + clamped * hw, y + 3, -clamped * hw, bh)
+			end
+			draw.DrawText(string.format("%.3f", info.val), "DermaDefault", 205, y, Color(255, 255, 255), TEXT_ALIGN_LEFT)
+			y = y + 16
+		end
+	cam.End3D2D()
 end)
