@@ -12,9 +12,9 @@ Garry's Mod ↔ VRCFaceTracking bridge using OSC over UDP.
 2. **[FoxyFace](https://github.com/Jeka8833/FoxyFace)** — Install and configure FoxyFace so it can relay tracking data to VRCFT above. ([Install Guide](https://foxyface.jeka8833.pp.ua/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace/))
 3. **Garry's Mod luasocket** (good luck)
 
-**Then:**
-
-Subscribe on the Steam Workshop: [GFoxyFace](https://steamcommunity.com/sharedfiles/filedetails/?id=282498239)
+**Then do these:**
+1. One-time setup from below
+2. Start GMod, run in console (after installing addon): `gfoxyface_start`
 
 ## Usage
 
