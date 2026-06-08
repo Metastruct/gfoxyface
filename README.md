@@ -53,15 +53,17 @@ Before the OSC hack works, you need to have **loaded the avatar in VRChat at lea
 2. Wear the debug avatar: [VRCFaceTracking Debug Avatar](https://vrchat.com/home/avatar/avtr_3efe552c-3f33-4eff-b360-26ccb5c925a1)
 3. Enable OSC from circle menu settings!!!
 4. Close VRChat. The avatar osc config is now cached.
+
 ## Developers: data flow
 
 ```mermaid
-flowchart LR
+flowchart TB
     Webcam --> FoxyFace --> VRCFT
-    VRCFT -- "OSC / port 9000" --> GMod
+    VRCFT -- "OSC / port 9000" --> luasocket["luasocket<br/>(socket.core)"]
+    luasocket -- "OSC / port 9001" --> VRCFT
+    luasocket --> GMod
     GMod --> gfoxyface_state["gfoxyface.state"]
     gfoxyface_state -- "Tick → net message" --> Server
     Server --> OtherClients["Other Clients"]
     OtherClients --> UpdateAnimation["UpdateAnimation<br/>SetFlexWeight + SetFlexScale"]
-    GMod -- "OSC / port 9001<br/>(tracking requests)" --> VRChat
 ```
