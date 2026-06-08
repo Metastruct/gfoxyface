@@ -4,7 +4,6 @@ gfoxyface.Tag = Tag
 _G.gfoxyface = gfoxyface
 include("gfoxyface/shared.lua")
 if SERVER then
-	util.AddNetworkString(gfoxyface.Tag)
 	AddCSLuaFile("gfoxyface/shared.lua")
 	AddCSLuaFile("gfoxyface/client.lua")
 	AddCSLuaFile("gfoxyface/vrcft.lua")
