@@ -83,4 +83,11 @@ flowchart TB
     server.lua -- "rebroadcast" --> client.lua["<b>client.lua</b><br/>on_net_setup / on_net_flexes"]
 
     client.lua --> UpdateAnimation["<b>UpdateAnimation</b><br/>SetFlexWeight + SetFlexScale"]
+
+    click mapping href "https://github.com/Metastruct/gfoxyface/blob/54719d117869b9745d4faa40d2143902c96ac8e6/lua/gfoxyface/client.lua#L220"
+    click on_vrcft href "https://github.com/Metastruct/gfoxyface/blob/54719d117869b9745d4faa40d2143902c96ac8e6/lua/gfoxyface/vrcft.lua"
+    click state href "https://github.com/Metastruct/gfoxyface/blob/54719d117869b9745d4faa40d2143902c96ac8e6/lua/gfoxyface/client.lua#L25"
+    click server.lua href "https://github.com/Metastruct/gfoxyface/blob/54719d117869b9745d4faa40d2143902c96ac8e6/lua/gfoxyface/server.lua"
+    click client.lua href "https://github.com/Metastruct/gfoxyface/blob/54719d117869b9745d4faa40d2143902c96ac8e6/lua/gfoxyface/client.lua#L132"
+    click UpdateAnimation href "https://github.com/Metastruct/gfoxyface/blob/54719d117869b9745d4faa40d2143902c96ac8e6/lua/gfoxyface/client.lua#L188"
 ```
